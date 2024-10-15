@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +12,8 @@ body {
     color: #333;
 }
 
-/* Linha preta no topo com o aviso de desconto */
+/******************************************************************* Register for discount line **********************************************************************/
+
 .discount-banner {
     background-color: #000;
     color: #fff;
@@ -23,29 +26,45 @@ body {
     font-size: 16px;
     font-weight: bold;
 }
+
 .register{
     text-decoration: underline;
 }
 
+/*********************************************************************Header yellow bar******************************************************************************/
+
 /* Linha amarela com "Todos os Produtos" e "Assine" */
 .header-bar {
+    display: flex;
+    align-items: center;
     background-color: #FFC107;
     display: flex;
+    height: 96px;
+    font-weight: bold;
     justify-content: space-between;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 10px 54px;
+    font-size: 16px;
     color: #000;
 }
 
 .header-bar .subscribe {
+    background-color: #000;
     font-weight: bold;
     cursor: pointer;
-    text-decoration: underline;
+    color: white;
+    padding: 15px;
+    border-radius:6px;
 }
 
-/* Header com imagem de fundo e textos alinhados à direita */
+.actions-buttons-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 11px;
+}
+
 header {
-    background-image: url('assets/pic1.jpg'); /* Aqui vai a imagem de fundo */
+    background-image: url('assets/pic1.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -58,19 +77,25 @@ header {
 .header-content {
     color: white;
     text-align: right;
+    width: 563px;
+    height: 248px;
 }
 
 header h1 {
-    font-size: 36px;
-    line-height: 1.2;
-    color: #fff;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FDF3D3;
+    text-align: start;
 }
 
 header p {
     font-size: 18px;
-    color: #fff;
+    color: #FDF3D3;
     margin-top: 10px;
+    text-align: start;
 }
+
+/************************************************************************* Filters CSS*******************************************************************************/
 
 .filters {
     display: flex;
@@ -78,8 +103,6 @@ header p {
     gap: 15px;
     margin: 20px 0;
 }
-
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
 .filter-container {
     display: flex;
@@ -102,11 +125,11 @@ header p {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 .OralCareTitle{
     color: #F7C325;
     font-weight: 500;
     size: 48px;
-
 }
 
 .filter-container button.active {
@@ -124,6 +147,8 @@ header p {
     margin-right: 15px;
 }
 
+/****************************************************************** Cards of products CSS ****************************************************************************/
+
 .productsToothPast,
 .productsToothBrush,
 .productsDeltalFloss {
@@ -131,10 +156,11 @@ header p {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 62px;
-    justify-content: start; /* Alinha os itens à esquerda */
+    justify-content: start; 
 }
 
-.product {
+.productPast{
+    display: flex;
     background-color: #FDF3D3;
     padding: 20px;
     border-radius: 16px;
@@ -143,23 +169,40 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    flex-direction: column;
 }
 
-.product:hover {
-    transform: scale(1.05);
+.discount-badge {
+    top: -10px;
+    left: -10px;
+    width: 80px;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.product img {
-    width: 320px;
-    height: 190px;
-    transform: rotate(90deg);
-    margin-bottom: 10px;
-}
-
-.product p {
+.productPast p {
     font-size: 18px;
     color: #333;
     margin: 10px 0;
+}
+
+.productPast:hover {
+    transform: scale(1.05);
+}
+
+.toothPastPic{
+    background-image: url('assets/toothpastpic.png'); /* Aqui vai a imagem de fundo */
+    background-size: cover;
+    background-position: center;
+
+    img{
+        width: 124.34px;
+        height: 75px;
+    }
 }
 
 .price-discount {
@@ -171,6 +214,100 @@ header p {
     color: green;
     font-weight: bold;
 }
+
+.contentCard {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.star {
+    color: #FFD700; 
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.reviews {
+    color: #6e0e25; 
+    font-size: 14px;
+}
+
+.product-name {
+    font-size: 22px;
+    color: #4e0a1e; 
+    margin: 10px 0;
+}
+
+.price-section {
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #555;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.new-price {
+    color: #f5c400;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.add-to-cart {
+    background-color: #f5c400;
+    border: none;
+    color: #4e0a1e;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #e0ae00; 
+}
+
+.half-star-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 18px; 
+    height: 18px;
+    overflow: hidden;
+}
+
+.half-star {
+    color: #FFD700;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 50%;
+    overflow: hidden;
+}
+
+.half-star-wrapper::before {
+    content: "★";
+    color: #d3d3d3;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+/************************************************************************* Footer CSS *******************************************************************************/
+
 
 .footerPicture{
     background-image:url('assets/lastPic.jpg');
@@ -206,7 +343,6 @@ footer input {
 
 .footerPicture{
     width: 467px;
-
 }
 
 footer button {
