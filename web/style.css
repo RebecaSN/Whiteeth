@@ -380,8 +380,21 @@ header p {
     width:381px;
 }
 
+.footerText{
+    width: 596px;
+    height: 64px;
+}
+
 .newsletter p{
     color: #000;
+    font-size: 32px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    justify-content: center;
+    text-align: start;
 }
 
 footer {
@@ -392,11 +405,13 @@ footer {
     padding: 20px;
     margin-top: 20px;
     height: 358px;
+    justify-content: space-between;
 }
 
 footer input {
     padding: 10px;
-    width: 250px;
+    width: 435px;
+    height: 48px;
     margin-right: 10px;
     border-radius: 5px;
     border: 2px solid black ;
@@ -411,9 +426,11 @@ footer button {
     background-color: #F7C325;
     border: none;
     color: black;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
     border-radius: 8px;
+    width: 94px;
+    height: 48px;
 }
 
 footer button:hover {
