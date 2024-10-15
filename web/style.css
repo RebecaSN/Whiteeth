@@ -126,10 +126,15 @@ header p {
     transition: background-color 0.3s ease;
 }
 
-.OralCareTitle{
+.oralCareTitle{
     color: #F7C325;
     font-weight: 500;
-    size: 48px;
+    text-align: center;
+    font-size: 48px;
+}
+
+.oralCare{
+    padding: 65px;
 }
 
 .filter-container button.active {
@@ -147,16 +152,42 @@ header p {
     margin-right: 15px;
 }
 
+.circle {
+    width: 64px; 
+    height: 64px;
+    background-color: #FFC107;  
+    border-radius: 50%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle i {
+    font-size: 32px;  
+    color: #000;  
+}
+.message{
+    display: flex;
+    align-items: end;
+}
+
 /****************************************************************** Cards of products CSS ****************************************************************************/
 
 .productsToothPast,
 .productsToothBrush,
 .productsDeltalFloss {
+    border-top: 3px solid #000; /* Borda na parte superior */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 62px;
     justify-content: start; 
+    padding-top: 20px; /* Espaço dentro do container da seção */
+    padding-bottom: 20px; /* Espaço no final da seção */
+    width: 90%; /* Define uma largura para não ocupar toda a página */
+    margin: 0 auto 40px; /* Centraliza e adiciona espaço abaixo entre as seções */
+    /* border: 2px solid #000; */
+    
 }
 
 .productPast{
@@ -195,7 +226,7 @@ header p {
 }
 
 .toothPastPic{
-    background-image: url('assets/toothpastpic.png'); /* Aqui vai a imagem de fundo */
+    background-image: url('assets/toothpastpic.png'); 
     background-size: cover;
     background-position: center;
 
@@ -203,6 +234,11 @@ header p {
         width: 124.34px;
         height: 75px;
     }
+}
+
+.brushPic{
+    width: 150px; /* ou o tamanho desejado */
+    height: 150px; /* ou o tamanho desejado */
 }
 
 .price-discount {
@@ -216,8 +252,29 @@ header p {
 }
 
 .contentCard {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
     text-align: center;
     font-family: Arial, sans-serif;
+    margin-top: 81px;
+}
+
+.contentCardBrush {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* margin-top: 81px; */
+}
+
+.brushPic{
+    object-fit: cover; 
+    width: 226px;
+    height: 163px;
 }
 
 .rating {
@@ -242,7 +299,10 @@ header p {
 }
 
 .price-section {
+    display: flex;
     margin: 10px 0;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .old-price {
@@ -305,6 +365,7 @@ header p {
     z-index: 0;
     width: 100%;
 }
+
 
 /************************************************************************* Footer CSS *******************************************************************************/
 
